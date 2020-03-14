@@ -1,11 +1,15 @@
 import React from 'react';
 import logo from './logo.svg';
-import './App.css';
+import './App.scss';
+
 import { GoodThingsView } from './Components/GoodThingsView';
+
+
 
 function App() {
   return (
-    <GoodThingsView></GoodThingsView>
+   
+        <GoodThingsView></GoodThingsView>
   );
 }
 

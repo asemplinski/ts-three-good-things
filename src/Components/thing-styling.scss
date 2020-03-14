@@ -1,0 +1,20 @@
+.thing-one-line{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    background-color: #bedfe5;
+    border-top: solid .05em #89b9ed;
+    border-top: solid .05em #89b9ed;
+    border-left: solid .1em #89b9ed;
+    border-right: solid .1em #89b9ed;
+    border-radius: .3em;
+
+
+    & > h5{
+        margin-left: 3%;
+        margin-top: 1%;
+        margin-bottom: 1%;
+        overflow-y: auto;
+    }
+
+}
