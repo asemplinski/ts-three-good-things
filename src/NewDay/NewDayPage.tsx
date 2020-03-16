@@ -1,21 +1,22 @@
 import React, { Component } from 'react';
-import Days from './Day';
+import NavBar from '../Components/NavBar';
+import NewDay from './NewDay';
 
 
 interface Props {
 }
 
 interface State {
-    days: [];
+
 }
 
 
 
 
-export class GoodThingsView extends Component<Props, State> {
+export class NewDayPage extends Component<Props, State> {
 
 
-
+    /*
     constructor(props: any){
         super(props)
         this.state = {
@@ -36,6 +37,7 @@ export class GoodThingsView extends Component<Props, State> {
 
         //console.log(this.state)
     }
+    */
 
 
 
@@ -44,15 +46,16 @@ export class GoodThingsView extends Component<Props, State> {
     render(){
         console.log(this.state)
         return (
-              <Days Days={this.state.days}></Days>
+              <div>
+                <NavBar></NavBar>
+                <NewDay></NewDay>
+              </div>
         );
     }
 
 }
 
-export default GoodThingsView;
-
-
+export default NewDayPage
 /*
 const RenderRow = (props: any) =>{
 

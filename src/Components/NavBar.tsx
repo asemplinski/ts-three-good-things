@@ -1,18 +1,19 @@
 import React, { Component } from 'react';
-import Days from './Day';
+import { Route, NavLink, HashRouter } from 'react-router-dom';
+
+
 
 
 interface Props {
 }
 
 interface State {
-    days: [];
 }
 
 
 
 
-export class GoodThingsView extends Component<Props, State> {
+export class NavBar extends Component<Props, State> {
 
 
 
@@ -23,7 +24,7 @@ export class GoodThingsView extends Component<Props, State> {
         }
     }
 
-
+    /*
     componentDidMount(){
         fetch("http://localhost:8080/api/v1/days")
         .then(response => response.json())
@@ -36,25 +37,28 @@ export class GoodThingsView extends Component<Props, State> {
 
         //console.log(this.state)
     }
-
+    */
 
 
 
 
     render(){
-        console.log(this.state)
+        //console.log(this.state)
         return (
-              <Days Days={this.state.days}></Days>
+            <React.Fragment>
+              <nav className="navbar navbar-dark bg-dark mb-3">
+                  <a className="navbar-brand" href="">
+                    <h1>OverView<span className="badge badge-secondary"></span></h1>
+                  </a>
+              </nav>
+              </React.Fragment>
+
         );
     }
 
 }
 
-export default GoodThingsView;
 
 
-/*
-const RenderRow = (props: any) =>{
+export default NavBar
 
-}
-*/

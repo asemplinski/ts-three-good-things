@@ -1,15 +1,15 @@
 import React from 'react';
-import logo from './logo.svg';
 import './App.scss';
 
-import { GoodThingsView } from './Components/GoodThingsView';
+import { Home } from './Home';
+import { NewDayPage } from './NewDay/NewDayPage';
 
 
 
 function App() {
   return (
-   
-        <GoodThingsView></GoodThingsView>
+        <Home></Home>
+        //<NewDayPage></NewDayPage>>
   );
 }
 
