@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
-import './NewDayStyling.scss'
-import Thing from '../Components/Thing';
+import './NewDayStyling.scss';
+import { useHistory } from 'react-router-dom';
+import SubmitButton from './SubmitButton';
 
 
 interface Props {
@@ -95,6 +96,12 @@ export class NewDay extends Component<Props, State> {
             body: JSON.stringify(NewDay)
         })
 
+        let path = '/';
+        let history = useHistory();
+        history.push(path);
+
+
+
         console.log(JSON.stringify(NewDay));
     }
 
@@ -128,7 +135,7 @@ export class NewDay extends Component<Props, State> {
                             value={this.state.thing3}
                             onChange={this.handleChange}></input>
                 </label>
-                <button type="button" value="Submit" className="btn btn-primary submit-button" onClick={this.handleSubmit}>Submit</button>
+                <SubmitButton ClickFunction={() => this.handleSubmit} value="Submit"></SubmitButton>
             </form>
 
         );

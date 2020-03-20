@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
-import NavBar from './Components/NavBar';
+
 import GoodThingsView from './Components/GoodThingsView';
 import NewDay from './NewDay/NewDay';
-import { Route, NavLink, HashRouter} from 'react-router-dom';
+import { Route, NavLink, HashRouter, BrowserRouter as Router} from 'react-router-dom';
 
 
 interface Props {
@@ -49,7 +49,7 @@ export class Home extends Component<Props, State> {
         console.log(this.state)
         return (
               <div>
-                <HashRouter>
+                <Router>
                     <nav className="navbar navbar-dark bg-dark mb-3">
                         <NavLink className="navbar-brand" to="/">
                             <h3>OverView</h3>
@@ -62,12 +62,13 @@ export class Home extends Component<Props, State> {
                         <Route exact path="/" component={GoodThingsView}/>
                         <Route path="/NewDay" component={NewDay}/>
                     </div>
-                </HashRouter>
+                </Router>
               </div>
         );
     }
 
 }
+
 
 export default Home
 
