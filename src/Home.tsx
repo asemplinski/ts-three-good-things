@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 
 import GoodThingsView from './Components/GoodThingsView';
 import NewDay from './NewDay/NewDay';
-import { Route, NavLink, HashRouter, BrowserRouter as Router} from 'react-router-dom';
+import { Route, NavLink, BrowserRouter as Router} from 'react-router-dom';
 
 
 interface Props {
