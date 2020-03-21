@@ -1,60 +1,26 @@
-import React, { Component } from 'react';
+import React, { useState, useEffect } from 'react';
 import Days from './Day';
 
 
-interface Props {
-}
 
-interface State {
-    days: [];
-}
+export const GoodThingsView = () => {
 
+    const [days, setDays]  = useState();
 
-
-
-export class GoodThingsView extends Component<Props, State> {
-
-
-
-    constructor(props: any){
-        super(props)
-        this.state = {
-            days: []
-        }
-    }
-
-
-    componentDidMount(){
+    useEffect(() => {
         fetch("http://localhost:8080/api/v1/days")
         .then(response => response.json())
         .then(data => {
-            this.setState({days: data});
-            //console.log(data);
-            //console.log(this.state)
+            setDays(data);
         })
         .catch(console.log)
+    }, [])
 
-        //console.log(this.state)
-    }
-
-
-
-
-
-    render(){
-        console.log(this.state)
-        return (
-              <Days Days={this.state.days}></Days>
-        );
-    }
-
+    return (
+            <Days Days={days}></Days>
+    );
 }
 
 export default GoodThingsView;
 
 
-/*
-const RenderRow = (props: any) =>{
-
-}
-*/

@@ -46,7 +46,6 @@ export class Home extends Component<Props, State> {
 
 
     render(){
-        console.log(this.state)
         return (
               <div>
                 <Router>
@@ -72,9 +71,3 @@ export class Home extends Component<Props, State> {
 
 export default Home
 
-
-/*
-const RenderRow = (props: any) =>{
-
-}
-*/
